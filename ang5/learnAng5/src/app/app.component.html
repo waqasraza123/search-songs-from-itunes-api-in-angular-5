@@ -16,13 +16,9 @@
       </div>
       
       <ul class="list-group">
-        <li class="list-group-item"
-            *ngFor="let track of results | async">
-          <img src="{{track.thumbnail}}">
-          <a target="_blank"
-             href="{{track.link}}">{{ track.track }}
-          </a>
-        </li>
+          <li *ngFor="let track of results | async;let index = index" class="list-group-item">
+                <app-song-item  [item]="track"></app-song-item>
+          </li>
       </ul>
 </div>      
 <router-outlet></router-outlet>

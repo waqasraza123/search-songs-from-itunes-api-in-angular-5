@@ -15,6 +15,7 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/do';
+import { SongItemComponent } from './song-item/song-item.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import 'rxjs/add/operator/do';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    AppheaderComponent
+    AppheaderComponent,
+    SongItemComponent
   ],
   imports: [
     BrowserModule,
