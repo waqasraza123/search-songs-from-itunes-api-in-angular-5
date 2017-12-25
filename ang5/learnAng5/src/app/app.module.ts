@@ -16,6 +16,19 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/do';
 import { SongItemComponent } from './song-item/song-item.component';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { SignupComponent } from './signup/signup.component';
+
+// Paste in your FireBase credentials
+var firebaseConfig = {
+    apiKey: "AIzaSyArNYjgU3Upztpn7zbpryeVke9OJJT1NXM",
+    authDomain: "ng5project-3d13b.firebaseapp.com",
+    databaseURL: "https://ng5project-3d13b.firebaseio.com",
+    projectId: "ng5project-3d13b",
+    storageBucket: "",
+    messagingSenderId: "862005819034"
+};
 
 
 @NgModule({
@@ -24,14 +37,17 @@ import { SongItemComponent } from './song-item/song-item.component';
     HomeComponent,
     AboutComponent,
     AppheaderComponent,
-    SongItemComponent
+    SongItemComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(firebaseConfig),  
+    AngularFirestoreModule                            
   ],
   providers: [DataService,SearchService],
   bootstrap: [AppComponent]

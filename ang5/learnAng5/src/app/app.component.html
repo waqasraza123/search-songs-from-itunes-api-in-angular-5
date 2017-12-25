@@ -1,6 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <app-appheader></app-appheader>
+<ul *ngFor="let user of Users | async">
+  <li>
+    <strong>{{ user.fullname}}</strong>
+    <br>
+    <strong>{{user.email}}</strong>
+  </li>
+</ul>
+
 <div class="form">
 <form class="form-inline" >
         <div class="form-group">
