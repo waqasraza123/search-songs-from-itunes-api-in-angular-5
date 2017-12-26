@@ -19,6 +19,13 @@ import { SongItemComponent } from './song-item/song-item.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { SignupComponent } from './signup/signup.component';
+import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardUserCardComponent } from './dashboard-user-card/dashboard-user-card.component';
+import { DashboardLatestProjectsComponent } from './dashboard-latest-projects/dashboard-latest-projects.component';
+import { DashboardFooterComponent } from './dashboard-footer/dashboard-footer.component';
+import { DashboardInboxComponent } from './dashboard-inbox/dashboard-inbox.component';
+import { DashboardLeftSideMenuComponent } from './dashboard-left-side-menu/dashboard-left-side-menu.component';
 
 // Paste in your FireBase credentials
 var firebaseConfig = {
@@ -38,7 +45,14 @@ var firebaseConfig = {
     AboutComponent,
     AppheaderComponent,
     SongItemComponent,
-    SignupComponent
+    SignupComponent,
+    RegisterComponent,
+    DashboardComponent,
+    DashboardUserCardComponent,
+    DashboardLatestProjectsComponent,
+    DashboardFooterComponent,
+    DashboardInboxComponent,
+    DashboardLeftSideMenuComponent
   ],
   imports: [
     BrowserModule,
