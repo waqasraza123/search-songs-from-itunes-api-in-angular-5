@@ -26,6 +26,7 @@ import { DashboardLatestProjectsComponent } from './dashboard-latest-projects/da
 import { DashboardFooterComponent } from './dashboard-footer/dashboard-footer.component';
 import { DashboardInboxComponent } from './dashboard-inbox/dashboard-inbox.component';
 import { DashboardLeftSideMenuComponent } from './dashboard-left-side-menu/dashboard-left-side-menu.component';
+import { LoginComponent } from './login/login.component';
 
 // Paste in your FireBase credentials
 var firebaseConfig = {
@@ -52,7 +53,8 @@ var firebaseConfig = {
     DashboardLatestProjectsComponent,
     DashboardFooterComponent,
     DashboardInboxComponent,
-    DashboardLeftSideMenuComponent
+    DashboardLeftSideMenuComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
