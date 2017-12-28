@@ -27,6 +27,7 @@ import { DashboardFooterComponent } from './dashboard-footer/dashboard-footer.co
 import { DashboardInboxComponent } from './dashboard-inbox/dashboard-inbox.component';
 import { DashboardLeftSideMenuComponent } from './dashboard-left-side-menu/dashboard-left-side-menu.component';
 import { LoginComponent } from './login/login.component';
+import { BlockChainComponent } from './block-chain/block-chain.component';
 
 // Paste in your FireBase credentials
 var firebaseConfig = {
@@ -54,7 +55,8 @@ var firebaseConfig = {
     DashboardFooterComponent,
     DashboardInboxComponent,
     DashboardLeftSideMenuComponent,
-    LoginComponent
+    LoginComponent,
+    BlockChainComponent
   ],
   imports: [
     BrowserModule,

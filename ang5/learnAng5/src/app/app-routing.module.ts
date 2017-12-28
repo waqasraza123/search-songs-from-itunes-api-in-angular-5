@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './core/auth.guard';
+import { BlockChainComponent } from './block-chain/block-chain.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,8 @@ const routes: Routes = [
     path: 'signup', component: SignupComponent
   },{
     path: 'dashboard', component: DashboardComponent
+  },{
+    path: 'blockchainApi', component: BlockChainComponent
   }
 ];
 

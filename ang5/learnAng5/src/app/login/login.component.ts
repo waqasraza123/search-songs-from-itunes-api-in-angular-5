@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     if(formData.valid) {
       console.log(formData.value);    
       let record = this.afs.collection('Users',
-      (ref) => ref.where('email','==',formData.value.email).where('email','==',formData.value.email));
+      (ref) => ref.where('email','==',formData.value.email).where('password','==',formData.value.password));
       record.ref.get().then((success) => {
           console.log(success);
           this.router.navigate(['/dashboard'])
