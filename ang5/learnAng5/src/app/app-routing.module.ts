@@ -25,7 +25,7 @@ const routes: Routes = [
   },{
     path: 'dashboard', component: DashboardComponent
   },{
-    path: 'blockchainApi', component: BlockChainComponent
+    path: 'CryptoCurrencyApi', component: BlockChainComponent
   }
 ];
 

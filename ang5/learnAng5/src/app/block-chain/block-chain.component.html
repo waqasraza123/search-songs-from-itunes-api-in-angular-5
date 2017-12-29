@@ -1,3 +1,9 @@
-<p>
-  block-chain works!
-</p>
+
+
+<div *ngIf="cryptoData">
+    <div class="crypto-span">CryptoData</div>
+  <div id="crypto-container" *ngFor="let crypto of objectKeys(cryptoData)">
+    <span class="left">{{ crypto }}</span>
+    <span class="right">USD {{ cryptoData[crypto].USD | currency:'USD' }}, EUR {{ cryptoData[crypto].EUR | currency:'EUR' }}</span>
+  </div>
+</div>

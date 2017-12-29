@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { DataService } from './data.service';
 import { SearchService } from './search.service';
+import { CryptoCurrencyDataService } from './crypto-currency-data.service';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -67,7 +68,7 @@ var firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),  
     AngularFirestoreModule                            
   ],
-  providers: [DataService,SearchService],
+  providers: [DataService,SearchService,CryptoCurrencyDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

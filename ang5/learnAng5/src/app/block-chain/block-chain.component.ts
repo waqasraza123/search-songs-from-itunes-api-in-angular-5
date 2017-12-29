@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CryptoCurrencyDataService } from '../crypto-currency-data.service';
 
 @Component({
   selector: 'app-block-chain',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlockChainComponent implements OnInit {
 
-  constructor() { }
+  objectKeys = Object.keys;
+  cryptoData: any;
+  constructor(private _CryptoCurrencyDataService: CryptoCurrencyDataService) { }
 
   ngOnInit() {
+    this._CryptoCurrencyDataService.getprices().subscribe( res => { this.cryptoData=res.json(); console.log(res.json()); });
   }
 
 }
