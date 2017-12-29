@@ -25,3 +25,24 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Routing Module
+
+we created route's for different component's in `app-routing.module.ts`.
+
+## FireBaseCloud Integrated
+
+We integrated FireBase Cloud for User Registration with `Users` collection.You just for Sign [FireBase](https://firebase.google.com/) its Free.Then just need to install required packages for this.`npm install angularfire2`
+
+## Service For FireBase
+
+`authservice.service.ts` which handle the connection and `Users` registration.
+
+## Cryptocurrency
+
+We integrated [Api](https://www.cryptocompare.com/api) for using cryptocurrency in our project by Call http request.This
+[Link](https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,IOT&tsyms=USD,EUR) will return Prices.
+
+
+
+
