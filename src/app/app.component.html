@@ -1,5 +1,3 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
 <!-- <app-appheader></app-appheader>
 <ul *ngFor="let user of Users | async">
   <li>
@@ -7,11 +5,12 @@
     <br>
     <strong>{{user.email}}</strong>
   </li>
-</ul>
+</ul> -->
 
 <div class="form">
 <form class="form-inline" >
         <div class="form-group">
+          <span>Search: &nbsp;</span>
           <input type="search"
                  class="form-control"
                  placeholder="Enter search string"
@@ -28,5 +27,5 @@
                 <app-song-item  [item]="track"></app-song-item>
           </li>
       </ul>
-</div>       -->
+</div>      
 <router-outlet></router-outlet>
