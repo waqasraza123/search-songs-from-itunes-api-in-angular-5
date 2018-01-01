@@ -17,7 +17,7 @@ const routes: Routes = [
   },{
     path: 'register', component: RegisterComponent
   },{
-    path: 'home', component: HomeComponent
+    path: 'search-itunes', component: HomeComponent
   },{
     path: 'about/:id', component: AboutComponent
   },{
