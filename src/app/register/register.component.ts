@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-// import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
+import { AuthserviceService } from '../authservice.service';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 
 @Component({
@@ -12,7 +12,11 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 export class RegisterComponent implements OnInit {
   state: string = '';
   error: any;
-  constructor(public afs: AngularFirestore,private router: Router) { }
+  constructor(public afs: AngularFirestore,private router: Router,private _auth: AuthserviceService) { 
+    if(_auth.isLogin()){
+      this.router.navigate(['dashboard']);
+    }
+  }
 
   ngOnInit() {
   }

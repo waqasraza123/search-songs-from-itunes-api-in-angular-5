@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { DataService } from './data.service';
 import { SearchService } from './search.service';
+import { AuthserviceService } from './authservice.service';
 import { CryptoCurrencyDataService } from './crypto-currency-data.service';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -29,6 +30,7 @@ import { DashboardInboxComponent } from './dashboard-inbox/dashboard-inbox.compo
 import { DashboardLeftSideMenuComponent } from './dashboard-left-side-menu/dashboard-left-side-menu.component';
 import { LoginComponent } from './login/login.component';
 import { BlockChainComponent } from './block-chain/block-chain.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Paste in your FireBase credentials
 var firebaseConfig = {
@@ -65,10 +67,11 @@ var firebaseConfig = {
     ReactiveFormsModule,
     HttpModule,
     FormsModule,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(firebaseConfig),  
     AngularFirestoreModule                            
   ],
-  providers: [DataService,SearchService,CryptoCurrencyDataService],
+  providers: [DataService,SearchService,CryptoCurrencyDataService,AuthserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

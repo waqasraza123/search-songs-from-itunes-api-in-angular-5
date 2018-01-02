@@ -3,6 +3,8 @@ import { SearchService } from './search.service';
 import { Observable } from 'rxjs';
 import { FormGroup, FormControl } from '@angular/forms';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { AuthserviceService } from './authservice.service';
+import { Router } from '@angular/router';
 
 interface User {
   fullname: string;
@@ -21,8 +23,10 @@ export class AppComponent implements OnInit {
   private searchField: FormControl;
   UsersCol: AngularFirestoreCollection<User>;
   Users: Observable<User[]>;
-  constructor(private _itunes:SearchService,private afs: AngularFirestore) {
-
+  constructor(private _itunes:SearchService,private afs: AngularFirestore,private _auth: AuthserviceService,private router: Router) {
+    if(_auth.isLogin()){
+      this.router.navigate(['dashboard']);
+    }
   }
   ngOnInit() {
     this.searchField = new FormControl();
